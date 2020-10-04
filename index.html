@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="home.css" media="screen"/>
+  <script src="home.js"></script>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+  Score
+  Rules
+
+  You Picked
+  The House Picked
+
+  You Win
+  You Lose
+
+  Play Again
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div id="scoreBoard">
+    <div id="gameName"><h1>ROCK</h1><h1>PAPER</h1><h1>SCISSORS</h1></div>
+    <div id="scoreContainer">SCORE<div id="score">0</div></div>
+  </div>
+  <div id="container">
+    <div id="moveContainer">
+      <div class="scissors" onclick="move('scissors')"><i class="fas fa-hand-scissors"></i></div>
+      <div class="rock" onclick="move('rock')"><i class="fas fa-hand-rock"></i></div>
+      <div class="paper" onclick="move('paper')"><i class="fas fa-hand-paper"></i></div>
+    </div>
+    <div id="gameContainer">
+      <div id="yourMove"></div>
+      <div id="result"></div>
+      <div id="houseMove"></div>
+    </div>
+  </div>
+</body>
+</html>
