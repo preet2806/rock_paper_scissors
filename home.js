@@ -1,8 +1,11 @@
 var moves = ["scissors","rock","paper"];
 var userscore=0;
 var localscore=localStorage.getItem("finalScore");
-userscore=parseInt(localscore);
-console.log(typeof(userscore));
+if(localscore!=null){
+   userscore=parseInt(localscore); 
+}
+
+console.log((localscore));
 window.onload = () =>{
    document.getElementById("score").innerHTML=userscore; 
 }
