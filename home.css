@@ -114,6 +114,7 @@ i{
     color: #062937;
     font-size: 25px;
     height: 30px;
+    border-radius: 10px;
 }
 #gameContainer .scissors{
     width: 150px;
@@ -129,4 +130,85 @@ i{
 }
 h2{
     font-size: 30px;
+}
+@media (max-width: 6in){
+    #scoreBoard{
+        width: 70%;
+        padding: 10px 35px;
+    
+    }
+    #scoreContainer{
+        margin: 10px 0px;
+        padding: 6px 40px;
+    }
+    #score{
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    #moveContainer{
+        width: 280px;
+        grid-template-columns: repeat(7, 40px);
+        grid-template-rows: repeat(7, 40px);
+        padding: 80px 50px;
+    }
+    i{
+        font-size: 50px;
+        margin: 15px 15px;
+    }
+    .scissors{
+        border-width: 20px;
+    
+    }
+    .rock{
+        border-width: 20px;
+    }
+    .paper{
+        border-width: 20px;
+    }
+    #gameContainer{
+        min-width: 280px;
+        display: grid;
+        grid-template-columns: 130px 20px 130px;
+        grid-template-rows: 100px 40px 100px;
+    }
+    #yourMove{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        align-self: center;
+        justify-self: center;
+    }
+    #houseMove{
+        grid-column: 3/4;
+        grid-row: 1/2; 
+        align-self: center;
+        justify-self: center;
+    }
+    #result{
+        grid-row: 3/4;
+        grid-column: 1/4;
+        height: 80px;
+    }
+    #play{
+        padding: 7.5px 10px;
+        font-size: 25px;
+        height: 40px;
+    }
+    #gameContainer .scissors{
+        width: 80px;
+        height: 80px;
+    }
+    #gameContainer .rock{
+        width: 80px;
+        height: 80px;
+    }
+    #gameContainer .paper{
+        width: 80px;
+        height: 80px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    h1{
+        font-size: 20px;
+    }
 }

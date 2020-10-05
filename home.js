@@ -1,5 +1,12 @@
 var moves = ["scissors","rock","paper"];
-var score=0;
+var userscore=0;
+var localscore=localStorage.getItem("finalScore");
+userscore=parseInt(localscore);
+console.log(typeof(userscore));
+window.onload = () =>{
+   document.getElementById("score").innerHTML=userscore; 
+}
+
 const move = (m) => {
     document.getElementById("moveContainer").style.opacity=0;
     document.getElementById("moveContainer").style.zIndex=-1
@@ -8,7 +15,7 @@ const move = (m) => {
     var house=moves[Math.floor(Math.random() * moves.length)];
     console.log(m);
     document.getElementById("gameContainer").innerHTML='<div id="yourMove"><h2>You picked</h2><div class="'+m+'"><i class="fas fa-hand-'+m+'"></i></div></div><div id="result"></div><div id="houseMove"></div>';
-    document.getElementById("houseMove").innerHTML='<h2>The house picked</h2><div class="'+house+'"><i class="fas fa-hand-'+house+'"></i></div>';
+    document.getElementById("houseMove").innerHTML='<h2>House picked</h2><div class="'+house+'"><i class="fas fa-hand-'+house+'"></i></div>';
     var m=moves.indexOf(m);
     var h=moves.indexOf(house);
     var result=1;
@@ -21,9 +28,12 @@ const move = (m) => {
         result=0;
         resultStatement="Its a tie";
     }
+    
     document.getElementById("result").innerHTML='<h2>'+resultStatement+'</h2><div id="play" onclick="play()">Play Again</div>';
-    score=score+result;
-    document.getElementById("score").innerHTML=score;
+    userscore=userscore+result;
+    document.getElementById("score").innerHTML=userscore;
+    var scorestring=userscore.toString();
+    localStorage.setItem("finalScore",scorestring);
 }
 const play = () => {
     document.getElementById("moveContainer").style.opacity=1;
