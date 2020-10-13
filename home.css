@@ -68,7 +68,12 @@ i{
     border-style: solid;
     border-width: 30px;
     border-color: #EF476F;
+    transition: 1s;
 
+}
+.scissors:hover{
+    transform: rotateZ(25deg);
+    box-shadow: 0 0 30px 20px #020E13;
 }
 .rock{
     grid-row: 1/4;
@@ -78,6 +83,11 @@ i{
     border-style: solid;
     border-width: 30px;
     border-color: #FFD166;
+    transition: 1s;
+}
+.rock:hover{
+    transform: rotateZ(25deg);
+    box-shadow: 0 0 30px 20px #020E13;
 }
 .paper{
     grid-row: 5/8;
@@ -87,6 +97,11 @@ i{
     border-style: solid;
     border-width: 30px;
     border-color: #06D6A0;
+    transition: 1s;
+}
+.paper:hover{
+    transform: rotateZ(25deg);
+    box-shadow: 0 0 30px 20px #020E13;
 }
 #gameContainer{
     grid-row: 1/2;
